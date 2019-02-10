@@ -1,12 +1,17 @@
+.NAME {
+  font-size: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .search {
   width: 100vw;
   height: auto;
-  background-color: #e74c3c;
+  background-color: #e74c3c; /*GREEN  #24e76f */
   position: fixed;
 }
 
 .searchbar{
-  margin-bottom: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   height: 60px;
@@ -20,17 +25,10 @@
   border: 0;
   outline: 0;
   background: none;
-  width: 0;
-  caret-color:transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-}
-
-.searchbar:hover > .search_input{
   padding: 0 10px;
   width: 450px;
   caret-color:#e74c3c;
-  transition: width 0.3s linear;
+  line-height: 40px;
 }
 
 .searchbar:hover > .search_icon{
