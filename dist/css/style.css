@@ -1,7 +1,6 @@
 .NAME {
-  font-size: 60px;
-  padding-left: 50px;
-  padding-right: 50px;
+  height: 60px;
+  margin: 10px 50px 10px 100px;
 }
 
 .search {
