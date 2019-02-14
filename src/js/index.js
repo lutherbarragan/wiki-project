@@ -1,6 +1,12 @@
-// Global app controller
-import x from "./test"
+import Axios from "axios";
 
-const y = 222
-console.log(x + 2);
-console.log(y);
+const state = {
+
+};
+
+const init = async () => {
+  state.DATA = await Axios("https://pokeapi.co/api/v2/pokemon/?limit=964").then(data => data.data.results)
+  console.log(state.DATA)
+}
+
+window.addEventListener("load", init)
