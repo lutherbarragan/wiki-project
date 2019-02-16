@@ -26,4 +26,4 @@ const init = async () => {
   console.log(state.DATA)
 }
 
-window.addEventListener("load", init)
+// window.addEventListener("load", init)
