@@ -8,7 +8,7 @@
   max-width: 350px;
   min-width: 250px;
   height: 60px;
-  margin: 10px 5% 0 5%;
+  margin: 10px 5% 0 0;
   transition: all .2s;
 }
 
@@ -82,10 +82,16 @@
   box-shadow: 0px 2px 8px -4px #222;
   font-size: 16px;
   font-weight: 400;
-  padding-left: 5%;
+  text-align: center;
 }
 
 .searched-string {
   color: #e74c3c;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 843px) {
+  .logo {
+    margin-left: 5%;
+  }
 }
