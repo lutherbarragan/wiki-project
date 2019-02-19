@@ -7,7 +7,7 @@ export default class Search {
   getResults(array, searchQuery) {
     array.forEach(pokemon => {
       if(pokemon.name.includes(searchQuery)) {
-        console.log(pokemon.name)
+        this.results.push(pokemon.name)
       }
     })
   }

@@ -5,10 +5,8 @@ import Search from "./models/Search";
 // V I E W S
 import * as SearchView from "./views/SearchView"
 
-
-const state = {
-
-};
+/*----------------------------------------------------------------------------------------*/
+const state = {};
 
 const searchControl = () => {
   //Get search query
@@ -30,22 +28,18 @@ const searchControl = () => {
     state.search.getResults(state.DATA, state.search.searchQuery)    
 
     //Prepare Dom to Render new Results
-      //Clear Loader
+      //setTimeOut
+          //Clear Loader
 
-    // if(results were found)
-        //update result information in DOM
-        SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
-        // render result list
-            
-    // else 
-        // render "NOT FOUND"
+          // if(results were found)
+              //update result information in DOM
+              SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
+              // render result list
+                  
+          // else 
+              // render "NOT FOUND"
 
-
-  } else {
-    console.log(null)
   }
-
-
 
 }
 
