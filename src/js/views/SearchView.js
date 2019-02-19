@@ -1,9 +1,11 @@
 import { elements } from "./base";
 
 export const getInput = () => {
-  if(elements.searchInput.value.length > 0) {
+  if(elements.searchInput.value.length > 2) {
+    alert(elements.searchInput.value)
     return elements.searchInput.value
   } else {
-    return false
+    alert("write at least 3 characters!")
+    return null
   }
 }

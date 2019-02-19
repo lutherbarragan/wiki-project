@@ -1,8 +1,10 @@
+import { elements } from "./views/base"
 import Axios from "axios";
-
+// M O D E L S
+import Search from "./models/Search";
+// V I E W S
 import * as SearchView from "./views/SearchView"
 
-import { elements } from "./views/base"
 
 const state = {
 
@@ -10,8 +12,19 @@ const state = {
 
 const searchControl = () => {
   //Get search query
-  let query = SearchView.getInput()
-  console.log(query)
+  let searchQuery = SearchView.getInput()
+  
+  //Create new model in state;
+  if(searchQuery) {
+    state.search = new Search(searchQuery);
+    console.log(state.search)
+
+  } else {
+    console.log(null)
+  }
+
+
+
 }
 
 
