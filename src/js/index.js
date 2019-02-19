@@ -16,12 +16,30 @@ const searchControl = () => {
   
   //Create new model in state (if there is a valid searchQuery)
   if(searchQuery) {
+    //Clear DOM for results
+        //clear input
+        //clear result info
+        //clear results
+
+    //render loader
+
     //Create search model inside state
     state.search = new Search(searchQuery);
-    console.log(state.search)
+    
+    //Look for pokemons in state.DATA
+    state.search.getResults(state.DATA, state.search.searchQuery)    
 
-    //update result information in DOM
-    SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
+    //Prepare Dom to Render new Results
+      //Clear Loader
+
+    // if(results were found)
+        //update result information in DOM
+        SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
+        // render result list
+            
+    // else 
+        // render "NOT FOUND"
+
 
   } else {
     console.log(null)
@@ -44,4 +62,4 @@ const init = async () => {
   console.log(state.DATA)
 }
 
-// window.addEventListener("load", init)
+window.addEventListener("load", init)
