@@ -22,6 +22,10 @@ export const renderLoader = () => {
   elements.resultBody.innerHTML = loader
 }
 
+export const clearInputValue = () => {
+  elements.searchInput.value = ""
+}
+
 export const clearLoader = () => {
   elements.resultBody.innerHTML = ""
 }

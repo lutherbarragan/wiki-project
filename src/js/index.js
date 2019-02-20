@@ -16,7 +16,9 @@ const searchControl = () => {
   if(searchQuery) {
     //Clear DOM for results
         //clear input
+        SearchView.clearInputValue()
         //clear result info
+        SearchView.clearResultInformation()
         //clear results
 
     //render loader
