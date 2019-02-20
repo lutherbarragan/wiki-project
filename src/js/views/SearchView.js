@@ -35,3 +35,7 @@ export const renderResultInformation = (numberOfResults, searchQuery) => {
   `
   elements.resultInformation.innerHTML = info
 }
+
+export const clearResultInformation = () => {
+  elements.resultInformation.innerHTML = ""
+}
