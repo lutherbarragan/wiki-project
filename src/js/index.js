@@ -20,6 +20,7 @@ const searchControl = () => {
         //clear results
 
     //render loader
+    SearchView.renderLoader()
 
     //Create search model inside state
     state.search = new Search(searchQuery);
@@ -28,16 +29,18 @@ const searchControl = () => {
     state.search.getResults(state.DATA, state.search.searchQuery)    
 
     //Prepare Dom to Render new Results
-      //setTimeOut
-          //Clear Loader
-
-          // if(results were found)
+      setTimeout(() => {
+        //Clear Loader
+        SearchView.clearLoader() 
+        //if(results were found)
               //update result information in DOM
               SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
-              // render result list
+              //render result list
                   
-          // else 
-              // render "NOT FOUND"
+          //else 
+              //update result information in DOM
+              //render "NOT FOUND"
+      }, 2000)
 
   }
 

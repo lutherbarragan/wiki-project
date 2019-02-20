@@ -9,6 +9,23 @@ export const getInput = () => {
   }
 }
 
+export const renderLoader = () => {
+  const loader = `
+  <img 
+    class="loader-image" 
+    src="https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825865sl5vr.png" 
+    alt="" 
+    width="120" 
+    height="120"
+  >
+  `
+  elements.resultBody.innerHTML = loader
+}
+
+export const clearLoader = () => {
+  elements.resultBody.innerHTML = ""
+}
+
 export const renderResultInformation = (numberOfResults, searchQuery) => {
 
   const info = `
@@ -17,5 +34,4 @@ export const renderResultInformation = (numberOfResults, searchQuery) => {
     <span class="searched-string">"${searchQuery}"</span>
   `
   elements.resultInformation.innerHTML = info
-
 }
