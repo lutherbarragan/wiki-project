@@ -120,6 +120,21 @@
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+.result-body {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.result-card {
+  display: inline-block;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+
 
 @media only screen and (max-width: 843px) {
   .logo {

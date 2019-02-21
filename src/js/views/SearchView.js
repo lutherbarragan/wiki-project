@@ -9,6 +9,10 @@ export const getInput = () => {
   }
 }
 
+export const clearInputValue = () => {
+  elements.searchInput.value = ""
+}
+
 export const renderLoader = () => {
   const loader = `
   <div class="backdrop"></div>
@@ -23,16 +27,12 @@ export const renderLoader = () => {
   elements.resultBody.innerHTML = loader
 }
 
-export const clearInputValue = () => {
-  elements.searchInput.value = ""
-}
-
 export const clearLoader = () => {
   elements.resultBody.innerHTML = ""
 }
 
-export const renderResultInformation = (numberOfResults, searchQuery) => {
 
+export const renderResultInformation = (numberOfResults, searchQuery) => {
   const info = `
     <span class="number-of-results">${numberOfResults}</span>
       results for 
@@ -43,4 +43,17 @@ export const renderResultInformation = (numberOfResults, searchQuery) => {
 
 export const clearResultInformation = () => {
   elements.resultInformation.innerHTML = ""
+}
+
+export const renderResultsCards = (resArr) => {
+  resArr.forEach(res => {
+    const resCard = `
+      <div class="result-card">
+        <h2>${res.name}</h2>
+        <a href="${res.url}">More info...</a>
+      </div>
+    `
+
+    elements.resultBody.insertAdjacentHTML("beforeend", resCard);
+  })
 }

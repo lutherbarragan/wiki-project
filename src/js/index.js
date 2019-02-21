@@ -38,6 +38,7 @@ const searchControl = () => {
               //update result information in DOM
               SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
               //render result list
+              SearchView.renderResultsCards(state.search.results)
                   
           //else 
               //update result information in DOM
