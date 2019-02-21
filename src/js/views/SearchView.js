@@ -11,6 +11,7 @@ export const getInput = () => {
 
 export const renderLoader = () => {
   const loader = `
+  <div class="backdrop"></div>
   <img 
     class="loader-image" 
     src="https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825865sl5vr.png" 

@@ -32,7 +32,7 @@ const searchControl = () => {
 
     //Prepare Dom to Render new Results
       setTimeout(() => {
-        //Clear Loader
+        // Clear Loader
         SearchView.clearLoader() 
         //if(results were found)
               //update result information in DOM
@@ -42,7 +42,7 @@ const searchControl = () => {
           //else 
               //update result information in DOM
               //render "NOT FOUND"
-      }, 2000)
+      }, 1200)
 
   }
 
