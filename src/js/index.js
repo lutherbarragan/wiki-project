@@ -43,7 +43,7 @@ const searchControl = () => {
           //else 
               //update result information in DOM
               //render "NOT FOUND"
-      }, 1200)
+      }, 1500)
 
   }
 
