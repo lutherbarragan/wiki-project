@@ -24,11 +24,11 @@ export const renderLoader = () => {
     height="120"
   >
   `
-  elements.resultBody.innerHTML = loader
+  elements.resultContainer.innerHTML = loader
 }
 
 export const clearLoader = () => {
-  elements.resultBody.innerHTML = ""
+  elements.resultContainer.innerHTML = ""
 }
 
 
@@ -54,6 +54,6 @@ export const renderResultsCards = (resArr) => {
       </div>
     `
 
-    elements.resultBody.insertAdjacentHTML("beforeend", resCard);
+    elements.resultContainer.insertAdjacentHTML("beforeend", resCard);
   })
 }

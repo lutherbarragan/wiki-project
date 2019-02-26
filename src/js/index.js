@@ -29,7 +29,7 @@ const searchControl = () => {
     
     //Look for pokemons in state.DATA
     state.search.getResults(state.DATA, state.search.searchQuery)    
-
+    console.log(state.search.results)
     //Prepare Dom to Render new Results
       setTimeout(() => {
         // Clear Loader
@@ -43,7 +43,7 @@ const searchControl = () => {
           //else 
               //update result information in DOM
               //render "NOT FOUND"
-      }, 1500)
+      }, 1600)
 
   }
 
