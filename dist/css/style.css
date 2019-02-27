@@ -182,6 +182,8 @@
   height: 100%;
   background-color: lightgray;
   overflow: auto;
+  text-align: center;
+  padding: 20px;
 }
 
 .body-side {
@@ -197,4 +199,5 @@
   height: 100px;
   text-align: center;
   border: 1px solid black;
+  margin: 6px 4px; 
 }
