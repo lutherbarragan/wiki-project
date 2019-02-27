@@ -1,5 +1,5 @@
 import { elements } from "./views/base"
-import Axios from "axios";
+import axios from "axios";
 // M O D E L S
 import Search from "./models/Search";
 // V I E W S
@@ -29,7 +29,6 @@ const searchControl = () => {
     
     //Look for pokemons in state.DATA
     state.search.getResults(state.DATA, state.search.searchQuery)    
-    console.log(state.search.results)
     //Prepare Dom to Render new Results
       setTimeout(() => {
         // Clear Loader
@@ -38,6 +37,7 @@ const searchControl = () => {
               //update result information in DOM
               SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
               //render result list
+              console.log(state.search.results)
               SearchView.renderResultsCards(state.search.results)
                   
           //else 
@@ -58,7 +58,7 @@ elements.searchForm.addEventListener("submit", e => {
 
 //Get basic Data & save it to state
 const init = async () => {
-  state.DATA = await Axios("https://pokeapi.co/api/v2/pokemon/?limit=964").then(data => data.data.results)
+  state.DATA = await axios("https://pokeapi.co/api/v2/pokemon/?limit=964").then(data => data.data.results)
   console.log(state.DATA)
 }
 
