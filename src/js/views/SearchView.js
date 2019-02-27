@@ -57,3 +57,13 @@ export const renderResultsCards = (resArr) => {
     elements.resultContainer.insertAdjacentHTML("beforeend", resCard);
   })
 }
+
+export const renderNotFound = () => {
+  const template = `
+    <div class="result_not_found">
+      <img src="${elements.resNotFound}">
+      <h6>Pokemon Not Found :(</h6>
+    </div>
+  `
+  elements.resultContainer.insertAdjacentHTML("beforeend", template)
+}

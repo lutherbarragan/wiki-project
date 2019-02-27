@@ -3,18 +3,20 @@ import axios from 'axios'
 export default class Search {
   constructor(searchQuery) {
     this.searchQuery = searchQuery,
-    this.results = []
+    this.results = [],
+    this.numOfResults = 0
   }
 
   getResults(array, searchQuery) {
     array.forEach(pokemon => {
       if(pokemon.name.includes(searchQuery)) {
+        this.numOfResults++
         axios(pokemon.url)
           .then(res => res.data)
           .then(pokemon => {
-            if(pokemon.sprites.front_default){
+            // if(pokemon.sprites.front_default){
               this.results.push(pokemon)
-            }
+            // }
           })
       }
     })
