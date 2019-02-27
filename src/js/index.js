@@ -34,10 +34,12 @@ const searchControl = () => {
         // Clear Loader
         SearchView.clearLoader() 
         //if(results were found)
+              //re-order
+              state.search.reOrder();
+              console.log(state.search.results)
               //update result information in DOM
               SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
               //render result list
-              console.log(state.search.results)
               SearchView.renderResultsCards(state.search.results)
                   
           //else 

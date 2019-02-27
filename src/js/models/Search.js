@@ -20,5 +20,8 @@ export default class Search {
     })
   }
 
+  reOrder() {
+    this.results.sort(function(a,b) {return (a.name.length > b.name.length) ? 1 : ((b.name.length > a.name.length) ? -1 : 0);} );
+  }
 
 }
