@@ -48,10 +48,13 @@ export const clearResultInformation = () => {
 export const renderResultsCards = (resArr) => {
   resArr.forEach(res => {
     const resCard = `
-      <div class="result-card">
-        <h2>${res.name}</h2>
-        <a href="${res.url}">More info...</a>
+    <div class="result-card" id="${res.id}" data-toggle="modal" data-target="#PokemonModal">
+      <img class="${res.name}" src="${res.sprites.front_default}">
+      <h6>${res.name.replace("-", " ")}</h6>
+      <div id="types-${res.id}" class="divTypes">
+      
       </div>
+    </div>
     `
 
     elements.resultContainer.insertAdjacentHTML("beforeend", resCard);

@@ -184,6 +184,9 @@
   overflow: auto;
   text-align: center;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .body-side {
@@ -194,10 +197,24 @@
 }
 
 .result-card {
-  display: inline-block;
-  width: 300px;
-  height: 100px;
+  width: 260px;
+  height: 250px;
   text-align: center;
-  border: 1px solid black;
-  margin: 6px 4px; 
+  display: inline-block;
+  background-color: #353B48;
+  color: ghostwhite;
+  margin: 5px 2px;
+  
 }
+
+.result-card:hover {
+  color: #0f0f0f;
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: none;
+}
+
+.result-card > img {
+  height: 150px;
+}
+
