@@ -45,6 +45,14 @@ export const clearResultInformation = () => {
   elements.resultInformation.innerHTML = ""
 }
 
+
+const renderTypes = (id, types) => {
+  types.forEach(type => {
+    const typeTemp = `<button class="${type.type.name} btnType">${type.type.name} </button>`
+    document.getElementById(`types-${id}`).insertAdjacentHTML("beforeend", typeTemp);
+  })
+}
+
 export const renderResultsCards = (resArr) => {
   resArr.forEach(res => {
     const resCard = `
@@ -58,6 +66,7 @@ export const renderResultsCards = (resArr) => {
     `
 
     elements.resultContainer.insertAdjacentHTML("beforeend", resCard);
+    renderTypes(res.id, res.types)  
   })
 }
 
