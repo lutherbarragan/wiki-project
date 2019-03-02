@@ -5,53 +5,36 @@ import Search from "./models/Search";
 // V I E W S
 import * as SearchView from "./views/SearchView"
 
-/*----------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 const state = {};
 
 const searchControl = () => {
-	//Get search query
-	let searchQuery = SearchView.getInput()
+	let searchQuery = SearchView.getInput() 	//Get search query
 
-	//Create new model in state (if there is a valid searchQuery)
-	if(searchQuery) {
+	if(searchQuery) { //start search (if there is a valid searchQuery)
 		//Clear DOM for results
-			//clear input
-			SearchView.clearInputValue()
-			//clear result info
-			SearchView.clearResultInformation()
-			//clear results
+			SearchView.clearPreviousResults(); //clear input, result info, results
 
-		//render loader
-		SearchView.renderLoader()
+		SearchView.renderLoader()	//render loader
 
-		//Create search model inside state
-		state.search = new Search(searchQuery);
+		state.search = new Search(searchQuery); //Create search model inside state
 		
-		//Look for pokemons in state.DATA
-		state.search.getResults(state.DATA, state.search.searchQuery)
-		console.log(state.search)    
+		state.search.getResults(state.DATA, state.search.searchQuery) //Look for pokemons in state.DATA
+		console.log(state.search)   
+
 		//Prepare Dom to Render new Results
 		setTimeout(() => {
-			// Clear Loader
-			SearchView.clearLoader() 
+			SearchView.clearLoader() // Clear Loader
 
-			if(state.search.numOfResults > 0) {
-				//re-order
-				state.search.reOrder();
-
+			if(state.search.numOfResults > 0) { // if they are results
+				state.search.reOrder(); //re-order
 				console.log(state.search.results)
-
-				//update result information in DOM
-				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
-
-				//render result list
-				SearchView.renderResultsCards(state.search.results)
+				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery) //update result information in DOM
+				SearchView.renderResultsCards(state.search.results)	//render result list
+				
 			} else {
-				//update result information in DOM
-				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery)
-
-				//render "NOT FOUND"
-				SearchView.renderNotFound();
+				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery) //update result information in DOM
+				SearchView.renderNotFound(); //render "NOT FOUND"
 			}
 				
 		}, 1600)

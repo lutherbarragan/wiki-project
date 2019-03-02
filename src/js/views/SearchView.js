@@ -9,8 +9,15 @@ export const getInput = () => {
   }
 }
 
-export const clearInputValue = () => {
+export const clearPreviousResults = () => {
   elements.searchInput.value = ""
+  elements.resultInformation.innerHTML = ""
+  elements.resultContainer.innerHTML = ""
+}
+
+
+export const clearLoader = () => {
+  elements.resultContainer.innerHTML = ""
 }
 
 export const renderLoader = () => {
@@ -18,7 +25,7 @@ export const renderLoader = () => {
   <div class="backdrop"></div>
   <img 
     class="loader-image" 
-    src="https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-1701527825865sl5vr.png" 
+    src="img/loader.png" 
     alt="" 
     width="120" 
     height="120"
@@ -26,11 +33,6 @@ export const renderLoader = () => {
   `
   elements.resultContainer.innerHTML = loader
 }
-
-export const clearLoader = () => {
-  elements.resultContainer.innerHTML = ""
-}
-
 
 export const renderResultInformation = (numberOfResults, searchQuery) => {
   const info = `
@@ -40,11 +42,6 @@ export const renderResultInformation = (numberOfResults, searchQuery) => {
   `
   elements.resultInformation.innerHTML = info
 }
-
-export const clearResultInformation = () => {
-  elements.resultInformation.innerHTML = ""
-}
-
 
 const renderTypes = (id, types) => {
   types.forEach(type => {
@@ -71,11 +68,6 @@ export const renderResultsCards = (resArr) => {
 }
 
 export const renderNotFound = () => {
-  const template = `
-    <div class="result_not_found">
-      <img src="${elements.resNotFound}">
-      <h6>Pokemon Not Found :(</h6>
-    </div>
-  `
+  const template = `<img src="img/pokemon not found.png" />`
   elements.resultContainer.insertAdjacentHTML("beforeend", template)
 }
