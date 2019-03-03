@@ -12,15 +12,38 @@ export const clearData = () => {
   elements.modalTitle.textContent = "";
   elements.carousel.innerHTML = "";
   elements.carouselIndicators.innerHTML = "";
+  elements.carouselSideControls.innerHTML = "";
 }
 
 export const imageCarousel = (array) => {
   let i = 0
   array.forEach(sprite => {
+    let title;
+
+    if(!sprite.includes("shiny") && !sprite.includes("back") && !sprite.includes("female")) {
+      title = "Normal"
+      
+    } else if(!sprite.includes("shiny") && sprite.includes("back") && !sprite.includes("female")) {
+      title = "Normal Back"
+      
+    } else if(sprite.includes("shiny") && !sprite.includes("back") && !sprite.includes("female")) {
+      title = "Shiny"
+     
+    }else if(sprite.includes("shiny") && sprite.includes("back") && !sprite.includes("female")) {
+      title = "Shiny Back"
+     
+    }else if(!sprite.includes("shiny") && !sprite.includes("back") && sprite.includes("female")) {
+      title = "Female"
+        
+    }else if(sprite.includes("shiny") && !sprite.includes("back") && sprite.includes("female")) {
+      title = "Female Shiny"
+     
+    }
+
     let carouselBody = `
     <div class="carousel-item">
       <div class="carousel-caption">
-        <h5 class="module-sprite-title">TITLE</h5>
+        <h5 class="module-sprite-title">${title}</h5>
       </div><img src="${sprite}" class="modal-sprites" alt="TITLE">
     </div>
     `
