@@ -339,6 +339,15 @@
   width: 200px;
 }
 
+.btn-close:hover .fa-times-circle { /* close btn */
+  color: #e74c3c;
+}
+
+.fa-times-circle { /* close btn icon*/
+  font-size: 32px;
+  padding-right: 2px;
+}
+
 .carousel-item {
   height: 350px;
   margin: 0;
