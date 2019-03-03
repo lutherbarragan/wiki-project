@@ -52,10 +52,14 @@ const renderTypes = (id, types) => {
 
 export const renderResultsCards = (resArr) => {
   resArr.forEach(res => {
+    let name = res.name.split("")
+    name[0] = name[0].toUpperCase()
+    name = name.join("")
+    
     const resCard = `
     <div class="result-element" id="${res.id}" data-toggle="modal" data-target="#PokemonModal">
       <img class="${res.name}" src="${res.sprites.front_default}">
-      <h6>${res.name.replace("-", " ")}</h6>
+      <h6>${name.replace("-", " ")}</h6>
       <div id="types-${res.id}" class="divTypes">
       
       </div>
