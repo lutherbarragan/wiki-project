@@ -4,5 +4,6 @@ export const elements = {
   searchBtn: document.querySelector(".search-input-button"),
   resultInformation: document.querySelector(".result-information"),
   resultContainer: document.querySelector(".body-center"),
-  //RESULTS LIST
+  //RESULTS LIST ELEMENTS
+  resultElement: document.querySelectorAll(".result-element")
 }

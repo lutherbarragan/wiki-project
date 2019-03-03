@@ -53,7 +53,7 @@ const renderTypes = (id, types) => {
 export const renderResultsCards = (resArr) => {
   resArr.forEach(res => {
     const resCard = `
-    <div class="result-card" id="${res.id}" data-toggle="modal" data-target="#PokemonModal">
+    <div class="result-element" id="${res.id}" data-toggle="modal" data-target="#PokemonModal">
       <img class="${res.name}" src="${res.sprites.front_default}">
       <h6>${res.name.replace("-", " ")}</h6>
       <div id="types-${res.id}" class="divTypes">
@@ -68,6 +68,6 @@ export const renderResultsCards = (resArr) => {
 }
 
 export const renderNotFound = () => {
-  const template = `<img src="img/pokemon not found.png" />`
+  const template = `<img class="imgNotFound" src="img/pokemon not found.png" />`
   elements.resultContainer.insertAdjacentHTML("beforeend", template)
 }

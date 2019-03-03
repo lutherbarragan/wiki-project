@@ -35,19 +35,37 @@ const searchControl = () => {
 			} else {
 				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery) //update result information in DOM
 				SearchView.renderNotFound(); //render "NOT FOUND"
-			}
-				
+			}	
 		}, 1600)
 
 	}
-
 }
 
+const selectedResultControl = (e) => {
+	if(e.target.closest(".result-element") !== null) {
+		const selectedID = e.target.closest(".result-element").id
+
+		state.search.results.forEach(res => {
+			if(res.id == selectedID) {
+				console.log('selected result info found!')
+			}
+		})
+
+
+		$('#PokemonModal').modal()
+	}
+	
+}
 
 //Search input event listener
 elements.searchForm.addEventListener("submit", e => {
 	e.preventDefault();
 	searchControl();
+})
+
+// Selected result click event listener
+elements.resultContainer.addEventListener('click', e => {
+	selectedResultControl(e);
 })
 
 //Get basic Data & save it to state

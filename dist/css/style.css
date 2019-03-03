@@ -205,7 +205,12 @@
     
 }
 
-.result-card {
+.imgNotFound {
+  width: 50%;
+  height: 33vw;
+}
+
+.result-element {
   width: 260px;
   height: 250px;
   text-align: center;
@@ -216,14 +221,14 @@
   
 }
 
-.result-card:hover {
+.result-element:hover {
   color: #0f0f0f;
   cursor: pointer;
   background-color: #e74c3c;
   border: none;
 }
 
-.result-card > img {
+.result-element > img {
   height: 150px;
 }
 
