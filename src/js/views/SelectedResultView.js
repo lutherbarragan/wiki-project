@@ -8,6 +8,12 @@ export const setData = (pokemon) => {
   elements.modalTitle.textContent = name.replace("-", " ");
 }
 
+export const clearData = () => {
+  elements.modalTitle.textContent = "";
+  elements.carousel.innerHTML = "";
+  elements.carouselIndicators.innerHTML = "";
+}
+
 export const imageCarousel = (array) => {
   let i = 0
   array.forEach(sprite => {

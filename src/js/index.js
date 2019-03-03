@@ -45,6 +45,8 @@ const searchControl = () => {
 }
 
 const selectedResultControl = (e) => {
+	SelectedResultView.clearData()
+
 	if(e.target.closest(".result-element") !== null) {
 		const selectedID = e.target.closest(".result-element").id
 
