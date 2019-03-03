@@ -5,5 +5,7 @@ export const elements = {
   resultInformation: document.querySelector(".result-information"),
   resultContainer: document.querySelector(".body-center"),
   //RESULTS LIST ELEMENTS
-  resultElement: document.querySelectorAll(".result-element")
+  resultElement: document.querySelectorAll(".result-element"),
+  //MODAL
+  modalTitle: document.querySelector(".modal-title"),
 }

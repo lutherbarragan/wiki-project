@@ -2,8 +2,11 @@ import { elements } from "./views/base"
 import axios from "axios";
 // M O D E L S
 import Search from "./models/Search";
+import SelectedResult from "./models/SelectedResult"
+
 // V I E W S
 import * as SearchView from "./views/SearchView"
+import * as SelectedResultView from './views/SelectedResultView'
 
 /*---------------------------------------------------------------------------------------*/
 const state = {};
@@ -47,7 +50,9 @@ const selectedResultControl = (e) => {
 
 		state.search.results.forEach(res => {
 			if(res.id == selectedID) {
-				console.log('selected result info found!')
+				state.search.selectedResult = new SelectedResult(selectedID, res)
+				console.log(state.search.selectedResult)
+				SelectedResultView.setData(state.search.selectedResult.data);
 			}
 		})
 
