@@ -6,6 +6,9 @@ export default class SelectedResult {
     this.data = data
   }
 
-  
+  getSprites() {
+    let urls = Object.values(this.data.sprites).filter(cur => cur !== null)
+    return urls
+  }
 
 }
