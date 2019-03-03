@@ -383,6 +383,7 @@
   position: absolute;
   transform: translate(-50%, -46%);
   left: 50%;
+  z-index: 500;
 }
 
 .poke-btn-1 {
@@ -393,7 +394,8 @@
   text-align: center;
   position: absolute;
   transform: translate(-50%, 12%);
-  left: 50%
+  left: 50%;
+  z-index: 600;
 }
 
 .poke-btn-2 {
@@ -404,11 +406,12 @@
   text-align: center;
   position: absolute;
   transform: translate(-50%, 16%);
-  left: 50%
+  left: 50%;
+  z-index: 700;
 }
 
 .modal-content {
-  min-width: 450px;
+  min-width: 250px;
   width: 100%;
   max-width: 100%;
 }
