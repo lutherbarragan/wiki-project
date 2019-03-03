@@ -39,4 +39,18 @@ export const imageCarousel = (array) => {
   elements.carousel.firstElementChild.classList.add("active")
   elements.carouselIndicators.firstElementChild.classList.add("active")
 
+  if(array.length > 1) {
+    elements.carouselSideControls.insertAdjacentHTML("beforeend",
+   `<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  `)
+  }
+
 }

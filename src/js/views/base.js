@@ -10,4 +10,5 @@ export const elements = {
   modalTitle: document.querySelector(".modal-title"),
   carousel: document.querySelector(".carousel-inner"),//----------carousel
   carouselIndicators: document.querySelector(".carousel-indicators"),
+  carouselSideControls: document.querySelector(".side-controls")
 }
