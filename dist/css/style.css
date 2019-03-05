@@ -419,6 +419,14 @@
 .modal-footer {
   height: 20px;
   padding: 0;
+  font-size: 16px;
+  padding: 10px 10px 12px 10px;
+}
+
+.modal-footer a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #006eff;
 }
 
 .div1 {
