@@ -6,6 +6,7 @@ export const setData = (pokemon) => {
     name = name.join("")
 
   elements.modalTitle.textContent = name.replace("-", " ");
+  elements.modalID.textContent = pokemon.id
 }
 
 export const clearData = () => {
