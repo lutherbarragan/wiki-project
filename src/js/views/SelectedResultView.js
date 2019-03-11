@@ -7,6 +7,7 @@ export const setData = (pokemon) => {
 
   elements.modalTitle.textContent = name.replace("-", " ");
   elements.modalID.textContent = pokemon.id
+  setTypes(pokemon.types)
 }
 
 export const clearData = () => {
@@ -14,6 +15,7 @@ export const clearData = () => {
   elements.carousel.innerHTML = "";
   elements.carouselIndicators.innerHTML = "";
   elements.carouselSideControls.innerHTML = "";
+  elements.modalTypes.innerHTML = "";
 }
 
 export const imageCarousel = (array) => {
@@ -77,5 +79,17 @@ export const imageCarousel = (array) => {
     </a>
   `)
   }
+
+}
+
+const setTypes = (types) => {
+    types.forEach(type => {
+        const typeMarkup = `<button class="${type.type.name} tag-button">${type.type.name}</button>`
+
+
+        elements.modalTypes.insertAdjacentHTML('beforeend', typeMarkup)
+    })
+
+
 
 }

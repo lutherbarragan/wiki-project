@@ -9,6 +9,7 @@ export const elements = {
   //MODAL
   modalTitle: document.querySelector(".modal-title"),
   modalID: document.querySelector(".tag-id"),
+  modalTypes: document.querySelector(".tag-types"),
   carousel: document.querySelector(".carousel-inner"),//----------carousel
   carouselIndicators: document.querySelector(".carousel-indicators"),
   carouselSideControls: document.querySelector(".side-controls")
