@@ -1,6 +1,8 @@
 import {elements} from "./base"
 
 export const setData = (pokemon) => {
+  console.log(pokemon);
+
   let name = pokemon.name.split("");
     name[0] = name[0].toUpperCase();
     name = name.join("");
@@ -8,7 +10,10 @@ export const setData = (pokemon) => {
   elements.modalTitle.textContent = name.replace("-", " ");
   elements.modalID.textContent = pokemon.id;
   setTypes(pokemon.types);
-  elements.modalSpecies.textContent = pokemon.species.name;
+
+  setTimeout(() => {
+      setSpecies(pokemon.speciesData.egg_groups)
+  }, 500)
 }
 
 export const clearData = () => {
@@ -96,3 +101,11 @@ const setTypes = (types) => {
 
 }
 
+const setSpecies = (speciesArr) => {
+    let speciesString = []
+    
+    speciesArr.forEach(speciesEl => {
+        speciesString.push(speciesEl.name)
+    })
+    elements.modalSpecies.textContent = speciesString.join(", ")
+}

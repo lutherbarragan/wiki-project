@@ -37,8 +37,8 @@ export default class SelectedResult {
     return normal
   }
 
-    getSpeciesData(url) {
-        axios(url)
+    async getSpeciesData(url) {
+        await axios(url)
             .then(res => res.data)
             .then(data => {
                 this.data.speciesData = data
