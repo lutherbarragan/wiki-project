@@ -55,7 +55,9 @@ const selectedResultControl = (e) => {
 				state.search.selectedResult = new SelectedResult(selectedID, res) // setting the search.selectedPokemon obj = to the clicked pokemon's info
                 // console.log(state.search.selectedResult)
                 
-				SelectedResultView.setData(state.search.selectedResult.data);
+				setTimeout(() => {
+                    SelectedResultView.setData(state.search.selectedResult.data);
+                }, 2000)
                 
 				//create Sprite Array
                 SelectedResultView.imageCarousel(state.search.selectedResult.getSprites())

@@ -1,27 +1,29 @@
 import {elements} from "./base"
 
 export const setData = (pokemon) => {
-  console.log(pokemon);
+    console.log(pokemon);
 
-  let name = pokemon.name.split("");
-    name[0] = name[0].toUpperCase();
-    name = name.join("");
+    let name = pokemon.name.split("");
+        name[0] = name[0].toUpperCase();
+        name = name.join("");
 
-  elements.modalTitle.textContent = name.replace("-", " ");
-  elements.modalID.textContent = pokemon.id;
-  setTypes(pokemon.types);
+    elements.modalTitle.textContent = name.replace("-", " ");
+    elements.modalID.textContent = pokemon.id;
+    setTypes(pokemon.types);
 
-  setTimeout(() => {
-      setSpecies(pokemon.speciesData.egg_groups)
-  }, 500)
+    elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
+
 }
 
 export const clearData = () => {
-  elements.modalTitle.textContent = "";
-  elements.carousel.innerHTML = "";
-  elements.carouselIndicators.innerHTML = "";
-  elements.carouselSideControls.innerHTML = "";
-  elements.modalTypes.innerHTML = "";
+    elements.modalTitle.textContent = "";
+    elements.carousel.innerHTML = "";
+    elements.carouselIndicators.innerHTML = "";
+    elements.carouselSideControls.innerHTML = "";
+    
+    elements.modalID.textContent = "";
+    elements.modalTypes.innerHTML = "";
+    elements.modalSpecies.textContent = "";
 }
 
 export const imageCarousel = (array) => {
@@ -99,13 +101,4 @@ const setTypes = (types) => {
 
 
 
-}
-
-const setSpecies = (speciesArr) => {
-    let speciesString = []
-    
-    speciesArr.forEach(speciesEl => {
-        speciesString.push(speciesEl.name)
-    })
-    elements.modalSpecies.textContent = speciesString.join(", ")
 }
