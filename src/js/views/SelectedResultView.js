@@ -44,7 +44,8 @@ export const imageCarousel = (array) => {
     <div class="carousel-item">
       <div class="carousel-caption">
         <h5 class="module-sprite-title">${title}</h5>
-      </div><img src="${sprite}" class="modal-sprites" alt="TITLE">
+      </div>
+      <img src="${sprite}" class="modal-sprites" alt="TITLE">
     </div>
     `
 

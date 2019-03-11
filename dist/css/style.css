@@ -257,6 +257,15 @@
   cursor: pointer;
 }
 
+.tag-button {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+}  
+
 .normal {
   background-color: #A8A878;
 }
@@ -330,37 +339,35 @@
 }
 
 /* MODAL */
-.module-sprite-title {
-  text-align: center;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: -10%;
-  left: 50%;
-  width: 200px;
-}
 
 .btn-close:hover .fa-times-circle { /* close btn */
   color: #e74c3c;
 }
 
-.fa-times-circle { /* close btn icon*/
-  font-size: 32px;
-  padding-right: 2px;
+.modal-dialog {
+    margin: 0 auto;
 }
 
 .carousel-item {
-  height: 350px;
+  height: 35vh;
   margin: 0;
   background-color: #e74c3c;
 }
 
 .modal-sprites {
-  height: 270px;
+  height: 80%;
+}
+
+.module-sprite-title {
+    font-size: 4vh;
 }
 
 .modal-header {
-  height: 65px;
   padding: 2px;
+}
+
+.modal-title {
+    font-size: 30px;
 }
 
 .modal-body {
@@ -372,6 +379,8 @@
   height: 4px;
   background-color: #0f0f0f;
   font-size: 1px;
+  position: absolute;
+  width: 100%;
 }
 
 .poke-btn {
@@ -410,32 +419,6 @@
   z-index: 700;
 }
 
-.modal-content {
-  min-width: 250px;
-  width: 100%;
-  max-width: 100%;
-}
-
-.modal-footer {
-  height: 20px;
-  padding: 0;
-  font-size: 16px;
-  padding: 10px 10px 12px 10px;
-}
-
-.modal-footer a {
-  font-weight: 500;
-  text-decoration: none;
-  color: #E74C3C;
-}
-
-.div1 {
-  width: 200px;
-  height: 300px;
-  background-color: red;
-  display: inline-block;
-}
-
 .carousel-element {
   display: inline-block;
   width: 300px;
@@ -443,202 +426,175 @@
   height: 300px;
 }
 
-.div2 {
-  width: 200px;
-  height: 300px;
-  background-color: blue;
-  display: inline-block;
+/* MODAL DATA STYLES */
+.modal, .fade, .show, #PokemonModal {
+    padding-left: 0 !important;
+    overflow: hidden;
 }
 
-/* MODAL STYLES */
-.parent {
-  max-width: 800px; 
-  height: 450px;
-  display: flex;
+.modal-header {
+    padding: 0;
 }
 
-ul {
-  list-style: none;
+
+.modal-data {
+    max-height: 52vh;
+    overflow: auto;
 }
 
-.child {
-  height: 100%;
-}
-
-.c1 {
-  min-width: 300px;
-  flex-grow: 8;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.c2 {
-  text-align: center;
-  min-width: 125px;
-  background-color: #E74C3C;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 15px;
-  margin-left: 10px;
-  margin-top: 20px;
-  height: 95%;
-}
-
-.moves-title {
-  font-size: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 0;
-}
-
-.move-list {
-  max-height: 370px;
-  min-width: 125px;
-  overflow: auto;
-  border-top: 2px solid #F3A69E;
-}
-
-.move {
-  height: 24px;
-  color: rgb(49, 49, 49);
-  background-color: #F3A69E;
-  margin: 5px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.move:hover {
-  background-color: #FFFFFF;
-  cursor: default;
-}
-
-.grand {
-  width: 100%;
-  border-bottom: 1px solid rgb(216, 216, 216);
-}
-
-.g1 {
-  height: 40%;
+.modal-data-body {
+  margin-top: 30px;
+  max-width: 800px;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
-  padding-left: 10px;
+  justify-content: center;
 }
 
-.g2 {
-  height: 35%;
+.data-section {
+  /* background-color: lightblue; */
+  /* height: 150px; */
+  margin-bottom: 4px;
 }
 
-.g3 {
-  height: 25%;
-  border:none;
+.data-section--inner {
+    width: 100%;
 }
 
-.inner-info {
-  flex-grow: 1;
-  height: 100%;
-  min-width: 150px;
+.section-small {
+    width: 49.7%;
+    min-width: 264px;
+    flex-grow: 1;
 }
 
-.inner-info-4 {
-  width: 50%;
+.tag-div {
+    width: 100%;
+    display: flex;
 }
 
-.info-tag{
-  padding: 5px 0;
-  display: flex;
+.stat-div {
+    width: 100%;
+    display: flex;
+    margin-top: 4px;
+    align-items: center;
 }
 
-.tag-odd {
-  background-color: rgb(230, 230, 230);
+.stat-tag {
+    width: 16%;
+    font-size: 14px;
+    text-align: end;
+    color: #707070;
 }
 
-.info-name {
-  width: 75px;
-  font-size: 14px;
-  color: rgb(90, 90, 90);
-  text-align: end;
+.stat-tag-result {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 2%;
 }
 
-.info-data {
-  font-size: 14px;
-  font-weight: bold; 
-  margin-left: 10px;
+.stat-tag-bar {
+    height: 12px;
+    border-radius: 20px;
+}
+
+.HP, .Sp-Def, .Speed {
+    background-color: #FFFF00;
+    border: 2px solid rgb(180, 180, 0);
+}
+
+.Attack, .Defense {
+    background-color: #FFA500;
+    border: 2px solid rgb(187, 121, 0);
+
+}
+
+.Sp-Atk {
+    background-color: #ADFF2F;
+    border: 2px solid rgb(116, 172, 32);
+}
+
+.odd {
+    background-color: #E6E6E6;
+}
+
+.male {
+    color: #0f77ff;
+}
+
+.female {
+    color: #ee00ee;
+}
+
+.steps {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pokeAPI {
+    color: #e74c3c;
+}
+
+.data-titles {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.data-tag {
+    color: #707070;
+    width: 50%;
+    font-size: 14px;
+    text-align: end;
+    margin-right: 2%;
+}
+
+.data-tag-result {
+    width: 50%;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 2%;
+}
+
+.section-big {
+  width: 100%;
+}
+
+.moves_section {
+  height: auto;
 }
 
 
-.tag-title-1 {
-  font-size: 20px;
-  margin: 20px 0 10px 0;
-  text-align: center;
+.move-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.tag-title {
-  margin: 0;
-  text-align: center;
-  font-size: 20px;
+.move {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #ffff;
+    font-weight: 700;
+    background-color: rgb(46, 46, 228);
 }
 
-.btn-type {
-  border: none;
-  border-radius: 5px;
-  font-size: 13px;
-  margin-right: 5px;
+
+.modal-footer {
+  padding: 0 25px 0 0;
+  font-size: x-small;
 }
 
-/* BASE STATS */
-
-.base-stat {
-  margin: 0 0 0 10px;
-  display: flex;
-  padding-top: 1px;
-}
-
-.base-stat-name {
-  min-width: 60px;
-  font-size: 14px;
-  color: rgb(90, 90, 90);
-  text-align: end;
-}
-
-.base-stat-number-level {
-  margin: 0 10px;
-  font-size: 14px;
-  font-weight:  bold;
-}
-
-.base-stat-chart-level {
-  height: 12px;
-  margin-top: 4px;
-  border-radius: 15px;
-}
-
-.yellow {
-  background-color: yellow
-}
-
-.orange {
-  background-color: orange
-}
-
-.green {
-  background-color: greenyellow;
-}
-
-.gender-male {
-  color: #006eff;
-}
-
-.gender-female {
-  color: #ee00ee;
-}
-
-.bold {
+.modal-footer span {
   font-weight: 500;
 }
 
-.soft-text {
-  font-weight: lighter;
-  color: rgb(90, 90, 90);
-}
-/* MODAL STYLES END */
+/* MODAL DATA STYLES END */
