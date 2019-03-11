@@ -57,7 +57,10 @@ const selectedResultControl = (e) => {
 				SelectedResultView.setData(state.search.selectedResult.data);
 
 				//create Sprite Array
-				SelectedResultView.imageCarousel(state.search.selectedResult.getSprites())
+                SelectedResultView.imageCarousel(state.search.selectedResult.getSprites())
+                
+                state.search.selectedResult.getSpeciesData(state.search.selectedResult.data.species.url)
+                console.log(state.search.selectedResult.data.speciesData)
 			}
 		})
 

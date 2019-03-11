@@ -1,4 +1,4 @@
-// import axios from axios;
+import axios from "axios";
 
 export default class SelectedResult {
   constructor(id, data) {
@@ -36,5 +36,13 @@ export default class SelectedResult {
 
     return normal
   }
+
+    getSpeciesData(url) {
+        axios(url)
+            .then(res => res.data)
+            .then(data => {
+                this.data.speciesData = data
+            })
+    }
 
 }
