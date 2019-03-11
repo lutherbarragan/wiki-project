@@ -1,13 +1,14 @@
 import {elements} from "./base"
 
 export const setData = (pokemon) => {
-  let name = pokemon.name.split("")
-    name[0] = name[0].toUpperCase()
-    name = name.join("")
+  let name = pokemon.name.split("");
+    name[0] = name[0].toUpperCase();
+    name = name.join("");
 
   elements.modalTitle.textContent = name.replace("-", " ");
-  elements.modalID.textContent = pokemon.id
-  setTypes(pokemon.types)
+  elements.modalID.textContent = pokemon.id;
+  setTypes(pokemon.types);
+  elements.modalSpecies.textContent = pokemon.species.name;
 }
 
 export const clearData = () => {
@@ -82,6 +83,7 @@ export const imageCarousel = (array) => {
 
 }
 
+// SET TYPES
 const setTypes = (types) => {
     types.forEach(type => {
         const typeMarkup = `<button class="${type.type.name} tag-button">${type.type.name}</button>`
@@ -93,3 +95,4 @@ const setTypes = (types) => {
 
 
 }
+
