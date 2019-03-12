@@ -6,12 +6,15 @@ export const setData = (pokemon) => {
     let name = pokemon.name.split("");
         name[0] = name[0].toUpperCase();
         name = name.join("");
-
     elements.modalTitle.textContent = name.replace("-", " ");
+
     elements.modalID.textContent = pokemon.id;
     setTypes(pokemon.types);
 
+
+    //SPECIES DATA
     elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
+    elements.modalGeneration.textContent = pokemon.speciesData.generation.name;
 
 }
 
