@@ -17,6 +17,17 @@ export const setData = (pokemon) => {
     //SPECIES DATA
     elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
     elements.modalGeneration.textContent = pokemon.speciesData.generation.name;
+    elements.modalColor.textContent = pokemon.speciesData.color.name
+    
+    // Habitat
+    if(pokemon.speciesData.habitat === null) {
+        elements.modalHabitat.textContent = `${pokemon.speciesData.habitat}`
+    } else {
+        elements.modalHabitat.textContent = pokemon.speciesData.habitat.name
+    }
+
+
+
 }
 
 export const clearData = () => {
@@ -31,6 +42,9 @@ export const clearData = () => {
     elements.modalGeneration.textContent = "";
     elements.modalHeight.textContent = "";
     elements.modalWeight.textContent = "";
+    elements.modalColor.textContent = "";
+    elements.modalHabitat.textContent = "";
+
 }
 
 export const imageCarousel = (array) => {
