@@ -11,11 +11,12 @@ export const setData = (pokemon) => {
     elements.modalID.textContent = pokemon.id;
     setTypes(pokemon.types);
 
+    elements.modalHeight.textContent = `${pokemon.height / 10}m`
+    elements.modalWeight.textContent = `${pokemon.weight / 10}kg`
 
     //SPECIES DATA
     elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
     elements.modalGeneration.textContent = pokemon.speciesData.generation.name;
-
 }
 
 export const clearData = () => {
@@ -27,6 +28,9 @@ export const clearData = () => {
     elements.modalID.textContent = "";
     elements.modalTypes.innerHTML = "";
     elements.modalSpecies.textContent = "";
+    elements.modalGeneration.textContent = "";
+    elements.modalHeight.textContent = "";
+    elements.modalWeight.textContent = "";
 }
 
 export const imageCarousel = (array) => {
