@@ -17,6 +17,10 @@ export const elements = {
   modalWeight: document.querySelector(".tag-weight"),
   modalColor: document.querySelector(".tag-color"),
   modalHabitat: document.querySelector(".tag-habitat"),
+  modalCatchRate: document.querySelector(".tag-catchRate"),
+  modalHappiness: document.querySelector(".tag-happiness"),
+  modalBaseExp: document.querySelector(".tag-exp"),
+  modalGrowthRate: document.querySelector(".tag-growthRate"),
   carousel: document.querySelector(".carousel-inner"),//----------carousel
   carouselIndicators: document.querySelector(".carousel-indicators"),
   carouselSideControls: document.querySelector(".side-controls")
