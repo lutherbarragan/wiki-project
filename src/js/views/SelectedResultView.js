@@ -14,23 +14,21 @@ export const setData = (pokemon) => {
     elements.modalHeight.textContent = `${pokemon.height / 10}m`
     elements.modalWeight.textContent = `${pokemon.weight / 10}kg`
 
+    elements.modalBaseExp.textContent = pokemon.base_experience
+
+
     //SPECIES DATA
     elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
     elements.modalGeneration.textContent = pokemon.speciesData.generation.name;
     elements.modalColor.textContent = pokemon.speciesData.color.name
     elements.modalCatchRate.textContent = pokemon.speciesData.capture_rate
     elements.modalHappiness.textContent = pokemon.speciesData.base_happiness
-    
     // Habitat
     if(pokemon.speciesData.habitat === null) {
         elements.modalHabitat.textContent = `${pokemon.speciesData.habitat}`
     } else {
         elements.modalHabitat.textContent = pokemon.speciesData.habitat.name
     }
-
-
-
-
 
 }
 
@@ -50,7 +48,7 @@ export const clearData = () => {
     elements.modalHabitat.textContent = "";
     elements.modalCatchRate.textContent = "";
     elements.modalHappiness.textContent = "";
-    
+    elements.modalBaseExp.textContent = "";
 
 }
 
