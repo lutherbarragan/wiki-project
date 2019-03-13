@@ -19,6 +19,7 @@ export const setData = (pokemon) => {
     elements.modalGeneration.textContent = pokemon.speciesData.generation.name;
     elements.modalColor.textContent = pokemon.speciesData.color.name
     elements.modalCatchRate.textContent = pokemon.speciesData.capture_rate
+    elements.modalHappiness.textContent = pokemon.speciesData.base_happiness
     
     // Habitat
     if(pokemon.speciesData.habitat === null) {
@@ -48,6 +49,8 @@ export const clearData = () => {
     elements.modalColor.textContent = "";
     elements.modalHabitat.textContent = "";
     elements.modalCatchRate.textContent = "";
+    elements.modalHappiness.textContent = "";
+    
 
 }
 
