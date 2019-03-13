@@ -29,6 +29,7 @@ export const setData = (pokemon) => {
     } else {
         elements.modalHabitat.textContent = pokemon.speciesData.habitat.name
     }
+    elements.modalGrowthRate.textContent = pokemon.speciesData.growth_rate.name
 
 }
 
@@ -49,7 +50,8 @@ export const clearData = () => {
     elements.modalCatchRate.textContent = "";
     elements.modalHappiness.textContent = "";
     elements.modalBaseExp.textContent = "";
-
+    elements.modalGrowthRate.textContent = "";
+    
 }
 
 export const imageCarousel = (array) => {
