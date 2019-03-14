@@ -25,6 +25,7 @@ export const elements = {
   modalMale: document.querySelector(".male"),
   modalFemale: document.querySelector(".female"),
   modalEggCycles: document.querySelector(".tag-egg-cycles"),
+  modalSteps: document.querySelector(".tag-steps"),
   carousel: document.querySelector(".carousel-inner"),//----------carousel
   carouselIndicators: document.querySelector(".carousel-indicators"),
   carouselSideControls: document.querySelector(".side-controls")

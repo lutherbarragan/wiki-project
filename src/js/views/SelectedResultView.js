@@ -32,6 +32,8 @@ export const setData = (pokemon) => {
     elements.modalGrowthRate.textContent = pokemon.speciesData.growth_rate.name
     // egg_groups
     elements.modalEggGroups.textContent = pokemon.speciesData.egg_groups.map(egg => egg.name).join(", ")
+    elements.modalMale.textContent = `${getGenderMaleRates(pokemon.speciesData.gender_rate)}% male`
+    elements.modalFemale.textContent = `${getGenderFemaleRates(pokemon.speciesData.gender_rate)}% female`
 
 }
 
@@ -54,6 +56,8 @@ export const clearData = () => {
     elements.modalBaseExp.textContent = "";
     elements.modalGrowthRate.textContent = "";
     elements.modalEggGroups.textContent = "";
+    elements.modalMale.textContent = "";
+    elements.modalFemale.textContent = "";
     
 }
 
@@ -132,4 +136,14 @@ const setTypes = (types) => {
 
 
 
+}
+
+const getGenderMaleRates = (gRate) => {
+    let percentage = (100 / 8);
+    return (100 - (gRate * percentage))
+}
+
+const getGenderFemaleRates = (gRate) => {
+    let percentage = (100 / 8);
+    return (gRate * percentage);
 }
