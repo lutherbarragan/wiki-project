@@ -38,6 +38,14 @@ export const setData = (pokemon) => {
     //egg cycles
     elements.modalEggCycles.innerHTML = eggCyclesSteps(pokemon.speciesData.hatch_counter)
 
+
+
+
+    //moves
+    pokemon.moves.forEach(move => {
+        elements.modalMoves.insertAdjacentHTML("beforeend", `<div class="move">${move.move.name}</div>`)
+    })
+
 }
 
 export const clearData = () => {
@@ -62,8 +70,8 @@ export const clearData = () => {
     elements.modalMale.textContent = "";
     elements.modalFemale.textContent = "";
     elements.modalEggCycles.textContent = "";
-    elements.modalSteps.textContent = "";
-    
+    elements.modalMoves.innerHTML = "";
+
 }
 
 export const imageCarousel = (array) => {

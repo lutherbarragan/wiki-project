@@ -586,13 +586,22 @@
 .move {
     margin: 5px;
     padding: 5px;
+    width: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
     color: #ffff;
     font-weight: 700;
-    background-color: rgb(46, 46, 228);
+    background-color: #356ABC;
+    border-radius: 5px;
+}
+
+.move:hover {
+    transition: all .2s;
+    transform: scale(1.1);
+    background-color: #e74c3c;
+    cursor: pointer;
 }
 
 
