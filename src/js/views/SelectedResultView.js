@@ -32,8 +32,11 @@ export const setData = (pokemon) => {
     elements.modalGrowthRate.textContent = pokemon.speciesData.growth_rate.name
     // egg_groups
     elements.modalEggGroups.textContent = pokemon.speciesData.egg_groups.map(egg => egg.name).join(", ")
+    //gender rates
     elements.modalMale.textContent = `${getGenderMaleRates(pokemon.speciesData.gender_rate)}% male`
     elements.modalFemale.textContent = `${getGenderFemaleRates(pokemon.speciesData.gender_rate)}% female`
+    //egg cycles
+    elements.modalEggCycles.innerHTML = eggCyclesSteps(pokemon.speciesData.hatch_counter)
 
 }
 
@@ -58,6 +61,8 @@ export const clearData = () => {
     elements.modalEggGroups.textContent = "";
     elements.modalMale.textContent = "";
     elements.modalFemale.textContent = "";
+    elements.modalEggCycles.textContent = "";
+    elements.modalSteps.textContent = "";
     
 }
 
@@ -146,4 +151,8 @@ const getGenderMaleRates = (gRate) => {
 const getGenderFemaleRates = (gRate) => {
     let percentage = (100 / 8);
     return (gRate * percentage);
+}
+
+const eggCyclesSteps = (cycles) => {
+    return `20 <span class="steps tag-steps">(${Math.round(cycles * 246.76)} - ${Math.round(cycles * 257)} steps)</span>`
 }
