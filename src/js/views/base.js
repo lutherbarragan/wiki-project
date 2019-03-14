@@ -21,6 +21,10 @@ export const elements = {
   modalHappiness: document.querySelector(".tag-happiness"),
   modalBaseExp: document.querySelector(".tag-exp"),
   modalGrowthRate: document.querySelector(".tag-growthRate"),
+  modalEggGroups: document.querySelector(".tag-egg-groups"),
+  modalMale: document.querySelector(".male"),
+  modalFemale: document.querySelector(".female"),
+  modalEggCycles: document.querySelector(".tag-egg-cycles"),
   carousel: document.querySelector(".carousel-inner"),//----------carousel
   carouselIndicators: document.querySelector(".carousel-indicators"),
   carouselSideControls: document.querySelector(".side-controls")

@@ -30,6 +30,8 @@ export const setData = (pokemon) => {
         elements.modalHabitat.textContent = pokemon.speciesData.habitat.name
     }
     elements.modalGrowthRate.textContent = pokemon.speciesData.growth_rate.name
+    // egg_groups
+    elements.modalEggGroups.textContent = pokemon.speciesData.egg_groups.map(egg => egg.name).join(", ")
 
 }
 
@@ -51,6 +53,7 @@ export const clearData = () => {
     elements.modalHappiness.textContent = "";
     elements.modalBaseExp.textContent = "";
     elements.modalGrowthRate.textContent = "";
+    elements.modalEggGroups.textContent = "";
     
 }
 

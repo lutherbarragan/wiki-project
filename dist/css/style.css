@@ -525,10 +525,12 @@
 }
 
 .male {
+    font-size: 12px;
     color: #0f77ff;
 }
 
 .female {
+    font-size: 12px;
     color: #ee00ee;
 }
 
