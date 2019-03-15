@@ -23,7 +23,6 @@ const searchControl = () => {
 		state.search = new Search(searchQuery); //Create search model inside state
 		
 		state.search.getResults(state.DATA, state.search.searchQuery) //Look for pokemons in state.DATA
-		console.log("[STATE.SEARCH OBJECT]", state.search)   
 
 		//Prepare Dom to Render new Results
 		setTimeout(() => {
@@ -31,7 +30,6 @@ const searchControl = () => {
 
 			if(state.search.numOfResults > 0) { // if they are results
 				state.search.reOrder(); //re-order
-				console.log("[RESULTS]", state.search.results)
 				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery) //update result information in DOM
 				SearchView.renderResultsCards(state.search.results)	//render result list
 				
@@ -53,25 +51,18 @@ const selectedResultControl = (e) => {
 		state.search.results.forEach(res => {
 			if(res.id == selectedID) {
 				state.search.selectedResult = new SelectedResult(selectedID, res) // setting the search.selectedPokemon obj = to the clicked pokemon's info
-                // console.log(state.search.selectedResult)
-                
 				setTimeout(() => {
                     SelectedResultView.setData(state.search.selectedResult.data);
                 }, 500)
                 
 				//create Sprite Array
                 SelectedResultView.imageCarousel(state.search.selectedResult.getSprites())
-                
                 state.search.selectedResult.getSpeciesData(state.search.selectedResult.data.species.url)
-                
-                // console.log(state.search.selectedResult.data.speciesData)
 			}
 		})
 
-
 		$('#PokemonModal').modal()
 	}
-	
 }
 
 //Search input event listener
@@ -88,7 +79,6 @@ elements.resultContainer.addEventListener('click', e => {
 //Get basic Data & save it to state
 const init = async () => {
 	state.DATA = await axios("https://pokeapi.co/api/v2/pokemon/?limit=964").then(data => data.data.results)
-	// console.log(state.DATA)
 }
 
 window.addEventListener("load", init)

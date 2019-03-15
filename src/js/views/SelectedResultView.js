@@ -1,8 +1,6 @@
 import {elements} from "./base"
 
 export const setData = (pokemon) => {
-    console.log(pokemon);
-
     let name = pokemon.name.split("");
         name[0] = name[0].toUpperCase();
         name = name.join("");
@@ -34,7 +32,6 @@ export const setData = (pokemon) => {
  
     elements.modalSpeedTag.textContent = pokemon.stats[0].base_stat
     elements.modalSpeedBar.style.cssText = `width: ${(pokemon.stats[0].base_stat * .40)}%`;
- 
 
     //SPECIES DATA
     elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
@@ -57,14 +54,10 @@ export const setData = (pokemon) => {
     //egg cycles
     elements.modalEggCycles.innerHTML = eggCyclesSteps(pokemon.speciesData.hatch_counter)
 
-
-
-
     //moves
     pokemon.moves.forEach(move => {
         elements.modalMoves.insertAdjacentHTML("beforeend", `<div class="move">${move.move.name}</div>`)
     })
-
 }
 
 export const clearData = () => {
@@ -157,7 +150,6 @@ export const imageCarousel = (array) => {
             elements.carouselIndicators.insertAdjacentHTML("beforeend", carouselIndicatorsMarkup)
         })
 
-        
         elements.carousel.firstElementChild.classList.add("active")
         elements.carouselIndicators.firstElementChild.classList.add("active")
 
@@ -195,7 +187,6 @@ export const imageCarousel = (array) => {
             elements.carouselIndicators.firstElementChild.classList.add("active")
 
     }
-    
 }
 
 // SET TYPES
