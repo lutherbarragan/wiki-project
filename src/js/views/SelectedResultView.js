@@ -16,6 +16,25 @@ export const setData = (pokemon) => {
 
     elements.modalBaseExp.textContent = pokemon.base_experience
 
+    //BASE STATS
+    elements.modalHpTag.textContent = pokemon.stats[5].base_stat
+    elements.modalHpBar.style.cssText = `width: ${(pokemon.stats[5].base_stat * .40)}%`;
+ 
+    elements.modalAttackTag.textContent = pokemon.stats[4].base_stat
+    elements.modalAttackBar.style.cssText = `width: ${(pokemon.stats[4].base_stat * .40)}%`;
+ 
+    elements.modalDefenseTag.textContent = pokemon.stats[3].base_stat
+    elements.modalDefenseBar.style.cssText = `width: ${(pokemon.stats[3].base_stat * .40)}%`;
+ 
+    elements.modalSpAtkTag.textContent = pokemon.stats[2].base_stat
+    elements.modalSpAtkBar.style.cssText = `width: ${(pokemon.stats[2].base_stat * .40)}%`;
+ 
+    elements.modalSpDefTag.textContent = pokemon.stats[1].base_stat
+    elements.modalSpDefBar.style.cssText = `width: ${(pokemon.stats[1].base_stat * .40)}%`;
+ 
+    elements.modalSpeedTag.textContent = pokemon.stats[0].base_stat
+    elements.modalSpeedBar.style.cssText = `width: ${(pokemon.stats[0].base_stat * .40)}%`;
+ 
 
     //SPECIES DATA
     elements.modalSpecies.textContent = pokemon.speciesData.genera[2].genus
@@ -71,6 +90,25 @@ export const clearData = () => {
     elements.modalFemale.textContent = "";
     elements.modalEggCycles.textContent = "";
     elements.modalMoves.innerHTML = "";
+
+    //BASE STATS
+    elements.modalHpTag.textContent = "";
+    elements.modalHpBar.style.cssText = "";
+
+    elements.modalAttackTag.textContent = "";
+    elements.modalAttackBar.style.cssText = "";
+
+    elements.modalDefenseTag.textContent = "";
+    elements.modalDefenseBar.style.cssText = "";
+
+    elements.modalSpAtkTag.textContent = "";
+    elements.modalSpAtkBar.style.cssText = "";
+
+    elements.modalSpDefTag.textContent = "";
+    elements.modalSpDefBar.style.cssText = "";
+
+    elements.modalSpeedTag.textContent = "";
+    elements.modalSpeedBar.style.cssText = "";
 
 }
 
