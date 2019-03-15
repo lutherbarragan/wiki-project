@@ -57,7 +57,7 @@ const selectedResultControl = (e) => {
                 
 				setTimeout(() => {
                     SelectedResultView.setData(state.search.selectedResult.data);
-                }, 2000)
+                }, 500)
                 
 				//create Sprite Array
                 SelectedResultView.imageCarousel(state.search.selectedResult.getSprites())
