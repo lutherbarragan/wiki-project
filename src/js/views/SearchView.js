@@ -56,9 +56,15 @@ export const renderResultsCards = (resArr) => {
     name[0] = name[0].toUpperCase()
     name = name.join("")
     
+    let img = "img/no-image.png"
+
+    if(res.sprites.front_default) {
+        img = res.sprites.front_default
+    }
+
     const resCard = `
     <div class="result-element" id="${res.id}" data-toggle="modal" data-target="#PokemonModal">
-      <img class="${res.name}" src="${res.sprites.front_default}">
+      <img class="${res.name}" src="${img}">
       <h6>${name.replace("-", " ")}</h6>
       <div id="types-${res.id}" class="divTypes">
       
