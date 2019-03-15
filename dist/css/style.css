@@ -553,6 +553,10 @@
     color: #fff;
 }
 
+.tag-species {
+    font-size: 13px !important;
+}
+
 .data-tag {
     color: #707070;
     width: 50%;
