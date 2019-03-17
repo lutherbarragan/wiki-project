@@ -217,7 +217,7 @@
   background-color: #353B48;
   color: ghostwhite;
   margin: 6px 4px;
-  
+  transition: all .2s
 }
 
 .result-element:hover {
@@ -225,6 +225,7 @@
   cursor: pointer;
   background-color: #e74c3c;
   border: none;
+  transform: scale(1.05);
 }
 
 .result-element > img {
