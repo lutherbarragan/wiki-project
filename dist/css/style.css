@@ -387,6 +387,7 @@
   font-size: 1px;
   position: absolute;
   width: 100%;
+  z-index: 100;
 }
 
 .poke-btn {
