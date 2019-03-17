@@ -49,8 +49,9 @@ export const setData = (pokemon) => {
     // egg_groups
     elements.modalEggGroups.textContent = pokemon.speciesData.egg_groups.map(egg => egg.name).join(", ")
     //gender rates
-    elements.modalMale.textContent = `${getGenderMaleRates(pokemon.speciesData.gender_rate)}% male`
-    elements.modalFemale.textContent = `${getGenderFemaleRates(pokemon.speciesData.gender_rate)}% female`
+
+    elements.modalGender.innerHTML = getGenderInfo(pokemon.speciesData.gender_rate);
+       
     //egg cycles
     elements.modalEggCycles.innerHTML = eggCyclesSteps(pokemon.speciesData.hatch_counter)
 
@@ -79,8 +80,7 @@ export const clearData = () => {
     elements.modalBaseExp.textContent = "";
     elements.modalGrowthRate.textContent = "";
     elements.modalEggGroups.textContent = "";
-    elements.modalMale.textContent = "";
-    elements.modalFemale.textContent = "";
+    elements.modalGender.innerHTML = "";
     elements.modalEggCycles.textContent = "";
     elements.modalMoves.innerHTML = "";
 
@@ -193,23 +193,17 @@ export const imageCarousel = (array) => {
 const setTypes = (types) => {
     types.forEach(type => {
         const typeMarkup = `<button class="${type.type.name} tag-button">${type.type.name}</button>`
-
-
         elements.modalTypes.insertAdjacentHTML('beforeend', typeMarkup)
     })
-
-
-
 }
 
-const getGenderMaleRates = (gRate) => {
-    let percentage = (100 / 8);
-    return (100 - (gRate * percentage))
-}
-
-const getGenderFemaleRates = (gRate) => {
-    let percentage = (100 / 8);
-    return (gRate * percentage);
+const getGenderInfo = (gRate) => {
+    const percentage = (100 / 8);
+    let genderRateElement = gRate === -1 
+        ? `<span class="genderless">Unknown</span>` 
+        : `<span class="male">${(100 - (gRate * percentage))}% Male</span> <span class="female">${(gRate * percentage)}% female</span>`;
+        
+    return genderRateElement;
 }
 
 const eggCyclesSteps = (cycles) => {

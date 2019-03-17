@@ -22,8 +22,9 @@ export const elements = {
     modalBaseExp: document.querySelector(".tag-exp"),
     modalGrowthRate: document.querySelector(".tag-growthRate"),
     modalEggGroups: document.querySelector(".tag-egg-groups"),
-    modalMale: document.querySelector(".male"),
-    modalFemale: document.querySelector(".female"),
+    modalGender: document.querySelector(".gender-tag"),
+    // modalMale: document.querySelector(".male"),
+    // modalFemale: document.querySelector(".female"),
     modalEggCycles: document.querySelector(".tag-egg-cycles"),
     modalSteps: document.querySelector(".tag-steps"),
 
