@@ -8,6 +8,7 @@ export default class Search {
   }
 
   getResults(array, searchQuery) {
+    searchQuery = searchQuery.toLowerCase()
     array.forEach(pokemon => {
       if(pokemon.name.includes(searchQuery)) {
         this.numOfResults++
