@@ -1,6 +1,7 @@
 .nav-body {
   width: 100vw;
   position: fixed;
+  z-index: 999;
 }
 
 .top-bar {
