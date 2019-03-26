@@ -1,3 +1,28 @@
+.info {
+    font-size: 16px;
+    text-align: center;
+    color: #F7F7F7;
+    background-color: #28B9B5;
+    padding: 5px 0;
+}
+
+.nameTag {
+    font-weight: 600;
+    text-decoration: none;
+    color: #F7F7F7;
+} 
+
+.link {
+    text-decoration: none;
+    color: #F7F7F7;
+    transition: all .15s;
+}
+
+.link:hover {
+    color: rgb(56, 56, 56);
+    text-decoration: none;
+}
+
 .nav-body {
   width: 100vw;
   position: fixed;
