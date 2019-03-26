@@ -4,6 +4,9 @@
     color: #F7F7F7;
     background-color: #28B9B5;
     padding: 5px 0;
+    white-space: nowrap;
+    overflow: auto;
+    max-height: 34px;
 }
 
 .nameTag {
