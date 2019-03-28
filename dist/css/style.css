@@ -26,18 +26,6 @@
     text-decoration: none;
 }
 
-.codewars {
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #F7F7F7;
-    box-sizing: border-box;
-}
-
-.link:hover > img {
-    border: 2px solid rgb(56, 56, 56);
-    transition: all .15s;
-}
-
 .nav-body {
   width: 100vw;
   position: fixed;
