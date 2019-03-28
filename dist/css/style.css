@@ -7,7 +7,7 @@
     white-space: nowrap;
     overflow: auto;
     max-height: 50px;
-    border-bottom: 4px solid #353b48;
+    border-bottom: 2px solid #353b48;
 }
 
 .nameTag {
@@ -22,7 +22,7 @@
     transition: all .15s;
 }
 
-.link:hover {
+.link:hover, .link:focus {
     color: rgb(56, 56, 56);
     text-decoration: none;
 }
@@ -80,7 +80,8 @@
 }
 
 .search-input-body:hover,
-.search-input-body:focus  {
+.search-input-body:focus,
+.search-input-body > .search-input-input:focus{
   filter: drop-shadow(5px 5px 5px #222);
   -webkit-filter: drop-shadow(5px 5px 5px #222); /* Safari */
 }
@@ -111,7 +112,8 @@
   cursor: pointer;
 }
 
-.search-input-body:hover > .search-input-button {
+.search-input-body:hover > .search-input-button, 
+.search-input-body:focus > .search-input-button {
   color: #e74c3c;
   background-color:ghostwhite;
 }
@@ -226,7 +228,7 @@
   background-color: #FFFFFF;
   overflow: auto;
   text-align: center;
-  padding: 20vh 20px 20px 20px;
+  padding: 22vh 20px 20px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -632,6 +634,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 .move {
