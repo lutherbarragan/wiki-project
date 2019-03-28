@@ -399,6 +399,7 @@
 .modal-header {
   height: 50px;
   padding: 2px;
+  border-bottom: 3px solid #0f0f0f;
 }
 
 .modal-title {
