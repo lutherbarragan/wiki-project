@@ -577,6 +577,13 @@
 }
 
 .pokeAPI {
+    font-weight: 600;
+    text-decoration: none;
+    color: #e74c3c;
+}
+
+.pokeAPI:hover {
+    /* text-decoration: none; */
     color: #e74c3c;
 }
 
