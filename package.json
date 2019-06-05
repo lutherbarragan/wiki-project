@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --open",
-    "start": "node server.js", 
-    "heroku-postbuild": "webpack -p" 
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p"
   },
   "author": "Luther Barragan",
   "license": "ISC",
@@ -21,7 +21,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.4",
     "sweetalert": "^2.1.2"
