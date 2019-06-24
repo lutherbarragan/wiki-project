@@ -37,7 +37,7 @@ const searchControl = () => {
 				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery) //update result information in DOM
 				SearchView.renderNotFound(); //render "NOT FOUND"
 			}	
-		}, 1600)
+		}, 2000)
 
 	}
 }
@@ -53,7 +53,7 @@ const selectedResultControl = (e) => {
 				state.search.selectedResult = new SelectedResult(selectedID, res) // setting the search.selectedPokemon obj = to the clicked pokemon's info
 				setTimeout(() => {
                     SelectedResultView.setData(state.search.selectedResult.data);
-                }, 500)
+                }, 1000)
                 
 				//create Sprite Array
                 SelectedResultView.imageCarousel(state.search.selectedResult.getSprites())
