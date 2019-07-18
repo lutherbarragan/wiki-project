@@ -37,7 +37,7 @@ const searchControl = () => {
 				SearchView.renderResultInformation(state.search.results.length, state.search.searchQuery) //update result information in DOM
 				SearchView.renderNotFound(); //render "NOT FOUND"
 			}	
-		}, 2000)
+		}, 2500)
 
 	}
 }
